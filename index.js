@@ -44,13 +44,13 @@ function Airplane(name) {
     this.age = age;
   }
 
-  Person.prototype.eat = function () {
+  Person.prototype.eat = function (value) {
     if (this.stomach.length < 11) {
-      this.stomach.push("someFood");
+      this.stomach.push(value);
     } else {
       return;
     }
-  };
+  };  
 
   Person.prototype.poop = function () {
     this.stomach = [];
@@ -62,6 +62,8 @@ function Airplane(name) {
   };
 
   const thePerson = new Person("Neo", 20);
+
+  thePerson.eat(1);
 
   /*
     TASK 2
